@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <a href="/login">login/signup</a>
+        <h1>WELCOME TO OLX</h1>
+        <br>
+        <table>
+            <tr>
+                <td>#</td>
+                <td>name</td>
+            </tr>
+            
+            <% for(var i=0;i<3;++i){ %>
+                    <tr>
+                <td><%= add[i].sno %></td>
+                <td><%= add[i].name %></td>
+                </tr>
+            <% } %>
+            
+        </table>
+
+    </body>
+</html>

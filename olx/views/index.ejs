@@ -1,0 +1,80 @@
+<html>
+
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body style="display:flex;align-items:center; justify-content: center;">
+        <div class="row">
+            <div class="col" style="width:500px">
+                <form method="post">
+                    <div class="card darken-1">
+                        <div class="card-content">
+                            <% if(locals.message){ %>
+                            <%=message %>
+                            <% } %>
+                            <div class="row">
+                                <div class="col s12">
+                                    <ul class="tabs">
+                                        <li class="tab col s3"><a class="active" href="#test1">Login</a></li>
+                                        <li class="tab col s3"><a href="#test2">SignUp</a></li>
+                                    </ul>
+                                </div>
+                                <div id="test1" class="col s12">
+                                    <form method="post">
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="input-field col s12">
+                                                <input name="email" id="first_name" type="email" class="validate">
+                                                <label for="first_name">Email</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input name="password" id="first_name" type="password" class="validate">
+                                                <label for="first_name">Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="card-action" style="text-align: right">
+                                            <button name="action" value="login" style="color: orange"
+                                                class="btn-flat modal-trigger">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="test2" class="col s12">
+                                    <form method="post">
+                                        <div class="row" style="margin-top:50px;">
+                                            <div class="input-field col s12">
+                                                <input name="email" id="first_name" type="email" class="validate">
+                                                <label for="first_name">Email</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input name="password" id="first_name" type="password" class="validate">
+                                                <label for="first_name">Password</label>
+                                            </div>
+                                            <div class="input-field col s12">
+                                                <input name="title" id="first_name" type="password" class="validate">
+                                                <label for="first_name">Confirm Password</label>
+                                            </div>
+                                        </div>
+                                        <div class="card-action" style="text-align: right">
+                                            <button name="action" value="signup" style="color: orange"
+                                                class="btn-flat modal-trigger">Sign
+                                                Up</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var el = document.querySelectorAll('.tabs');
+        var instance = M.Tabs.init(el);
+    </script>
+
+</html>
